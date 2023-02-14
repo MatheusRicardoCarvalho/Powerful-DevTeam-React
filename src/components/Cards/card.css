@@ -1,0 +1,6 @@
+.clear{
+    transition: 0.6s;
+}
+.clear:hover{
+    background-color: #B60752;
+}

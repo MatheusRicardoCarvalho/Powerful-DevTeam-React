@@ -1,0 +1,12 @@
+.card-dev{
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to left, #B60752, #740257, #410056);
+}
+.remover{
+    cursor: pointer;
+    height: 40px;
+    transition: 0.6s;
+}
+.remover:hover{
+    background-color: #B60752;
+}

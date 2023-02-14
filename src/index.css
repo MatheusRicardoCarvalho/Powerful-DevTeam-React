@@ -1,0 +1,169 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #fff;
+}
+#root{
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 25vh 75vh;
+  grid-template-areas: "header header"
+                        "aside main-content";
+
+  background-image: linear-gradient(to bottom, #440261, #310246);
+}
+.dev-team{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "h1-aside" "dev-1" "dev-2" "dev-3" "dev-4" "dev-5";
+
+  grid-gap: 6px;
+  
+}
+.dev-team-header{
+  display: flex;
+  justify-content: space-between;
+}
+.h1-aside{grid-area: h1-aside; }
+
+.dev-1{ grid-area: dev-1; }
+.dev-2{ grid-area: dev-2; }
+.dev-3{ grid-area: dev-3; }
+.dev-4{ grid-area: dev-4; }
+.dev-5{ grid-area: dev-5; }
+
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.form-btn{
+  background-color: #730661;
+  width: 80px;
+  height: 30px;
+  border-radius: 8px;
+  border: 0px;
+  font-weight: bold;
+
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+.form-btn:hover{
+  background-color: #5f0550;
+}
+.user-input{
+  border: solid 1px ;
+  width: 200px;
+  height: 30px;
+  padding: 3px;
+  margin: 0 15px 0 5px;
+  border-radius: 4px;
+  border: 0px;
+  background-color: #cc9fdf;
+  color: black;
+}
+.followers-icon{
+  display: flex;
+  max-width: 50px;
+  max-height: 50px;
+}
+.gist-icon{
+  display: flex;
+  max-width: 25px;
+  max-height: 30px;
+  margin-left: 10px;
+}
+.main-content{
+  grid-area: main-content;
+  justify-self: start;
+}
+.flex-items{
+  display: flex;
+}
+.user-github{
+  display: flex;
+  flex-direction: column;
+  
+  max-width: 100%;
+  
+  justify-content: flex-start;
+  align-items: center;
+  
+  margin-left: 4rem;
+  /*border: solid 1px;*/
+}
+.user-github-info{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.avatar-photo {
+  width: 80%;
+  max-width: 250px;
+  max-height: 70%;
+  border-radius: 50%;
+  padding: 5px;
+}
+.h1-header {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+.h2-user-github{
+  font-size: 28px;
+}
+#add-button{
+  width: 50px;
+  height: 50px;
+  font-size: xx-large;
+  border-radius: 50%;
+  border: solid 0px;
+
+  color: #fff;
+  background-color: #D90D6C;
+
+  transition: transform;
+  transition-duration: 0.5s;
+}
+.click-animation{
+  animation-name: add-button;
+  animation-duration: 3s;
+
+}
+#add-button:hover{
+  transform: scale(1.15);
+}
+
+header{
+  grid-area: header;
+}
+aside{
+  grid-area: aside;
+  /*justify-self: start;*/
+
+  margin-left: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+span{
+  font-family: sans-serif;
+  margin-left: 5px;
+}
+button{
+  background-color: #740257;
+  border: none;
+  border-radius: 6px;
+  width: 120px;
+  cursor: pointer;
+}
