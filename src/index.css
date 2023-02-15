@@ -1,22 +1,24 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #fff;
 }
-#root{
+
+#root {
   display: grid;
   width: 100vw;
   height: 100vh;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 25vh 75vh;
   grid-template-areas: "header header"
-                        "aside main-content";
+    "aside main-content";
 
   background-image: linear-gradient(to bottom, #440261, #310246);
 }
-.dev-team{
+
+.dev-team {
   display: grid;
   width: 100%;
   height: 100%;
@@ -25,27 +27,48 @@
   grid-template-areas: "h1-aside" "dev-1" "dev-2" "dev-3" "dev-4" "dev-5";
 
   grid-gap: 6px;
-  
+
 }
-.dev-team-header{
+
+.dev-team-header {
   display: flex;
   justify-content: space-between;
 }
-.h1-aside{grid-area: h1-aside; }
 
-.dev-1{ grid-area: dev-1; }
-.dev-2{ grid-area: dev-2; }
-.dev-3{ grid-area: dev-3; }
-.dev-4{ grid-area: dev-4; }
-.dev-5{ grid-area: dev-5; }
+.h1-aside {
+  grid-area: h1-aside;
+  font-size: 1.5rem;
+}
 
-.form{
+.dev-1 {
+  grid-area: dev-1;
+}
+
+.dev-2 {
+  grid-area: dev-2;
+}
+
+.dev-3 {
+  grid-area: dev-3;
+}
+
+.dev-4 {
+  grid-area: dev-4;
+}
+
+.dev-5 {
+  grid-area: dev-5;
+}
+
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 1rem;
+  font-size: 1rem;
 }
-.form-btn{
+
+.form-btn {
   background-color: #730661;
   width: 80px;
   height: 30px;
@@ -57,11 +80,13 @@
   transition-duration: 0.3s;
   transition-timing-function: linear;
 }
-.form-btn:hover{
+
+.form-btn:hover {
   background-color: #5f0550;
 }
-.user-input{
-  border: solid 1px ;
+
+.user-input {
+  border: solid 1px;
   width: 200px;
   height: 30px;
   padding: 3px;
@@ -71,41 +96,49 @@
   background-color: #cc9fdf;
   color: black;
 }
-.followers-icon{
+
+.followers-icon {
   display: flex;
   max-width: 50px;
   max-height: 50px;
 }
-.gist-icon{
+
+.gist-icon {
   display: flex;
   max-width: 25px;
   max-height: 30px;
   margin-left: 10px;
 }
-.main-content{
+
+.main-content {
   grid-area: main-content;
-  justify-self: start;
+  justify-self: flex-start;
+  margin-left: 10%;
 }
-.flex-items{
+
+.flex-items {
   display: flex;
 }
-.user-github{
+
+.user-github {
   display: flex;
   flex-direction: column;
-  
+
   max-width: 100%;
-  
+
   justify-content: flex-start;
   align-items: center;
-  
-  margin-left: 4rem;
+
   /*border: solid 1px;*/
 }
-.user-github-info{
+
+.user-github-info {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
+  font-size: 1rem;
+  margin-bottom: 6px;
 }
 
 
@@ -116,15 +149,19 @@
   border-radius: 50%;
   padding: 5px;
 }
+
 .h1-header {
   text-align: center;
   margin-top: 20px;
   padding: 10px;
+  font-size: 2rem;
 }
-.h2-user-github{
-  font-size: 28px;
+
+.h2-user-github {
+  font-size: 1.5rem;
 }
-#add-button{
+
+#add-button {
   width: 50px;
   height: 50px;
   font-size: xx-large;
@@ -137,33 +174,97 @@
   transition: transform;
   transition-duration: 0.5s;
 }
-.click-animation{
+
+.click-animation {
   animation-name: add-button;
   animation-duration: 3s;
 
 }
-#add-button:hover{
+
+#add-button:hover {
   transform: scale(1.15);
 }
 
-header{
+header {
   grid-area: header;
+  margin-left: 16px;
+  margin-right: 16px;
 }
-aside{
+
+aside {
   grid-area: aside;
   /*justify-self: start;*/
 
   margin-left: 0.8rem;
   margin-bottom: 0.5rem;
 }
-span{
+
+span {
   font-family: sans-serif;
   margin-left: 5px;
 }
-button{
+
+button {
   background-color: #740257;
   border: none;
   border-radius: 6px;
   width: 120px;
   cursor: pointer;
+  font-size: 0.8rem;
 }
+
+@media (max-width: 950px) {
+  #root {
+    grid-template-columns: 3.5fr 4fr;
+  }
+  .main-content {
+    justify-self: center;
+    margin-left: 0%;
+  }
+}
+
+@media (max-width: 700px) {
+  #root {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 3fr 7fr;
+    grid-template-areas:
+      "header"
+      "main-content"
+      "aside"
+    ;
+    row-gap: 30px;
+    height: 100%;
+    max-height: 1200px;
+  }
+
+  .card-dev {
+    font-size: 1.3rem;
+  }
+
+  .h1-aside{
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  * {
+    font-size: 90%;
+  }
+}
+
+/*
+@media only screen and (max-width: 540px) {
+  .dev-team{
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas: "h1-aside" "dev-1" "dev-2";
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .dev-team{
+    grid-template-rows: 0.2fr 1fr;
+    grid-template-areas: "h1-aside" "dev-1";
+  }
+}
+
+*/

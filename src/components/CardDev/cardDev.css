@@ -1,6 +1,7 @@
 .card-dev{
     border-radius: 0.5rem;
     background-image: linear-gradient(to left, #B60752, #740257, #410056);
+    font-size: 1rem;
 }
 .remover{
     cursor: pointer;

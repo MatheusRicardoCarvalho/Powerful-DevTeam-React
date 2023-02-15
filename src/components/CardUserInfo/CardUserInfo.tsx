@@ -60,9 +60,7 @@ export const CardUserInfo = (props: Props) => {
                     <h2 className="h2-user-github">{userData.name}</h2>
                     <img className="avatar-photo" src={userData.avatar_url}></img>
                     <div className="user-github-info">
-                        <img className="followers-icon"></img>
                         <span>{userData.followers} followers</span>
-                        <img className="gist-icon"></img>
                         <span>{userData.public_repos} repositórios publicados</span>
                     </div>
                     <button id="add-button" onClick={() => props.selectTeam(handleUser)}>+</button>
