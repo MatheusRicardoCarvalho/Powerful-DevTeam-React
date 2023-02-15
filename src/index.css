@@ -251,20 +251,3 @@ button {
     font-size: 90%;
   }
 }
-
-/*
-@media only screen and (max-width: 540px) {
-  .dev-team{
-    grid-template-rows: 0.2fr 1fr 1fr;
-    grid-template-areas: "h1-aside" "dev-1" "dev-2";
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  .dev-team{
-    grid-template-rows: 0.2fr 1fr;
-    grid-template-areas: "h1-aside" "dev-1";
-  }
-}
-
-*/
