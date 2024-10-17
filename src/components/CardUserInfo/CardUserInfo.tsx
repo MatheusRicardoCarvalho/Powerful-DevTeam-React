@@ -65,7 +65,7 @@ export const CardUserInfo = (props: Props) => {
                     </div>
                     <button id="add-button" onClick={() => props.selectTeam(handleUser)}>+</button>
                 </div>
-                : null
+                : <p className="p-title">Nenhum usuário encontrado :(</p>
             }
         </>
     )

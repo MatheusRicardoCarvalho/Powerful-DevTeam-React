@@ -1,0 +1,19 @@
+node_modules/
+
+build/
+
+.env
+
+.DS_Store
+
+# Sistema de arquivos do Windows
+Thumbs.db
+ehthumbs.db
+
+# Outros arquivos de sistema
+*.swp
+*.swo
+
+# Diretórios de cache
+.cache/
+
